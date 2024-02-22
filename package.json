@@ -1,0 +1,28 @@
+{
+    "name": "monorepo",
+    "version": "1.0.0",
+    "description": "Monorepo example",
+    "workspaces": [
+        "apps/*",
+        "services/*",
+        "packages/*",
+        "types/*"
+    ],
+    "scripts": {
+        "test": "npm run --workspaces test --if-present",
+        "build": "npm run --workspace=types --workspace=packages --workspace=services --workspace=apps build --if-present"
+    },
+    "author": "Krasnov Anton",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.11.19",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3",
+        "vite": "^5.1.3",
+        "vite-plugin-dts": "^3.7.2"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
