@@ -6,21 +6,20 @@ export interface DBClientBuilderOptions {
 
 export interface DBClientServiceResponse<T> {
     is_ok: boolean;
-    error?: any;
+    error?: unknown;
     data?: T;
 }
 
 export interface DBClientService {
     users: {
-        list: () => Promise<DBClientServiceResponse<User>>;
+        list: () => Promise<DBClientServiceResponse<User[]>>;
         create: (
-            id: string,
-            data: Partial<User>,
+            data: Partial<User>
         ) => Promise<DBClientServiceResponse<User | null>>;
         get: (id: string) => Promise<DBClientServiceResponse<User | null>>;
         update: (
             id: string,
-            data: Partial<User>,
+            data: Partial<User>
         ) => Promise<DBClientServiceResponse<boolean>>;
         delete: (id: string) => Promise<DBClientServiceResponse<boolean>>;
     };

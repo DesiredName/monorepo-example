@@ -12,6 +12,8 @@
     "references": [
         { "path": "./types/db-client/tsconfig.json" },
         { "path": "./services/db-client/tsconfig.json" },
-        { "path": "./packages/ui-components/tsconfig.json" }
+        { "path": "./packages/ui-components/tsconfig.json" },
+        { "path": "./apps/client-api/tsconfig.json" },
+        { "path": "./apps/client-server/tsconfig.json" }
     ]
 }

@@ -1,11 +1,24 @@
 {
-    "name": "ui-components",
+    "name": "@monorepo/ui-components",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
+    "main": "./dist/main.cjs",
+    "module": "./dist/main.js",
+    "types": "./dist/main.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/main.cjs",
+            "import": "./dist/main.js"
+        },
+        "./style.css": "./dist/style.css"
+    },
+    "files": [
+        "dist/*"
+    ],
     "scripts": {
         "dev": "vite",
-        "build": "vue-tsc && vite build",
+        "build": "vite build",
         "preview": "vite preview"
     },
     "dependencies": {
@@ -16,5 +29,8 @@
         "typescript": "^5.2.2",
         "vite": "^5.1.0",
         "vue-tsc": "^1.8.27"
-    }
+    },
+    "bundledDependencies": [
+        "@monorepo/ui-components"
+    ]
 }

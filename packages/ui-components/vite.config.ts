@@ -9,12 +9,17 @@ export default defineConfig({
         copyPublicDir: false,
         lib: {
             entry: resolve(__dirname, 'src/main.ts'),
-            formats: ['es'],
+            formats: ['es', 'cjs'],
             name: 'UILib',
-            fileName: 'main',
+            fileName: 'main'
         },
         rollupOptions: {
             external: ['vue'],
-        },
-    },
+            output: {
+                globals: {
+                    vue: 'Vue'
+                }
+            }
+        }
+    }
 });

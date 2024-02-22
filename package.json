@@ -15,6 +15,7 @@
     "author": "Krasnov Anton",
     "license": "ISC",
     "devDependencies": {
+        "@nestjs/cli": "^10.3.2",
         "@types/express": "^4.17.21",
         "@types/node": "^20.11.19",
         "eslint": "^8.56.0",

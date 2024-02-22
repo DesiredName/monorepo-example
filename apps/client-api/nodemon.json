@@ -1,0 +1,7 @@
+{
+    "ignore": [".git", "node_modules", "dist"],
+    "ext": "js,json,ts",
+    "watch": ["src", "tsconfig.json", "package.json"],
+    "verbose": true,
+    "exec": "tsc --build --force && cd dist && node main.js"
+}

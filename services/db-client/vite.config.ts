@@ -6,9 +6,17 @@ export default defineConfig({
     build: {
         lib: {
             entry: path.resolve(__dirname, 'src/main.ts'),
-            formats: ['es'],
+            formats: ['es', 'cjs'],
             name: 'DBClientService',
             fileName: 'main',
+        },
+        rollupOptions: {
+            external: ['lodash'],
+            output: {
+                globals: {
+                    lodash: 'lodash',
+                },
+            },
         },
     },
     plugins: [

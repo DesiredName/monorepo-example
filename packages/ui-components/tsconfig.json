@@ -12,8 +12,6 @@
         /* Bundler mode */
         "moduleResolution": "bundler",
         "isolatedModules": true,
-        "emitDeclarationOnly": true,
-        "allowImportingTsExtensions": true,
         "jsx": "preserve",
         "jsxImportSource": "vue",
 
@@ -23,6 +21,6 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "include": ["src"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
