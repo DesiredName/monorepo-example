@@ -8,20 +8,20 @@ export default defineConfig({
             entry: path.resolve(__dirname, 'src/main.ts'),
             formats: ['es', 'cjs'],
             name: 'DBClientService',
-            fileName: 'main',
+            fileName: 'main'
         },
         rollupOptions: {
             external: ['lodash'],
             output: {
                 globals: {
-                    lodash: 'lodash',
-                },
-            },
-        },
+                    lodash: 'lodash'
+                }
+            }
+        }
     },
     plugins: [
         dts({
-            rollupTypes: true,
-        }),
-    ],
+            rollupTypes: true
+        })
+    ]
 });

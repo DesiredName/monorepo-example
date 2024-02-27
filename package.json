@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "description": "Monorepo example",
     "workspaces": [
-        "apps/*",
-        "services/*",
+        "types/*",
         "packages/*",
-        "types/*"
+        "services/*",
+        "apps/*"
     ],
     "scripts": {
         "test": "npm run --workspaces test --if-present",

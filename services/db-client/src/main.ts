@@ -1,8 +1,6 @@
-import lodash from 'lodash';
+import uniqueId from 'lodash/uniqueId';
+import { DBClientBuilderOptions, DBClientService } from './types.js';
 import { User } from '@monorepo/db-client-entries';
-import { DBClientBuilderOptions, DBClientService } from './types';
-
-const { uniqueId } = lodash;
 
 function DBClientServiceBuilder(
     _options: DBClientBuilderOptions

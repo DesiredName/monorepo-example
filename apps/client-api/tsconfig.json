@@ -1,15 +1,10 @@
 {
-    "extends": "../../tsconfig.json",
     "compilerOptions": {
         "target": "ESNext",
         "module": "NodeNext",
         "moduleResolution": "NodeNext",
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "extendedDiagnostics": true,
-        "rootDir": "./src",
-        "outDir": "./dist",
-        "composite": true
+        "strict": true,
+        "outDir": "./dist"
     },
-    "include": ["./src/**/*"]
+    "include": ["src"]
 }

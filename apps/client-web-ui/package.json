@@ -1,5 +1,5 @@
 {
-    "name": "nuxt-app",
+    "name": "@monorepo/nuxt-app",
     "private": true,
     "type": "module",
     "scripts": {

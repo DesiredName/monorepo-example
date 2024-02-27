@@ -1,6 +1,6 @@
 import { User } from '@monorepo/db-client-entries';
 import { Injectable } from '@nestjs/common';
-import { DBService } from 'src/db/service';
+import { DBService } from './../db/service';
 
 @Injectable()
 export class UsersService {

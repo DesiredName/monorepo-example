@@ -1,5 +1,4 @@
 {
-    "extends": "../../tsconfig.json",
     "compilerOptions": {
         "module": "commonjs",
         "declaration": true,
@@ -11,15 +10,15 @@
         "target": "ES2021",
         "sourceMap": true,
         "outDir": "./dist",
-        "rootDir": "./",
-        "baseUrl": "./",
         "incremental": true,
         "skipLibCheck": true,
         "strictNullChecks": false,
         "noImplicitAny": false,
         "strictBindCallApply": false,
         "forceConsistentCasingInFileNames": false,
-        "noFallthroughCasesInSwitch": false
+        "noFallthroughCasesInSwitch": false,
+        // ENABLE additional commonJS support explicitly, since NestJS uses 'commonjs' module under the hood
+        "esModuleInterop": true
     },
     "include": ["src", "test"]
 }
